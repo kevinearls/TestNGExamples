@@ -1,7 +1,9 @@
 package com.kevinearls.testngtutorials;
 
+import com.kevinearls.testngtutorials.listeners.MyListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -9,6 +11,7 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * Created by kearls on 23/03/2017.
  */
+@Listeners({MyListener.class})
 public class AnnotationsTest {
 
     private static final Logger logger = LoggerFactory.getLogger(AnnotationsTest.class);
