@@ -30,7 +30,7 @@ public class AnnotationsTest {
     @Test(description = "THE THIRD TEST!!!!!", priority = 0, groups = "short")
     public void test3() {
         logger.info("Test 3 is running");
-        int x = 5 % 0;
+        //int x = 5 % 0;
     }
 
     @Test(description = "This test goes first", priority = 0, groups = "short", dependsOnMethods = "test3")
@@ -47,7 +47,7 @@ public class AnnotationsTest {
         assertEquals(n, 4);
     }
 
-    @Test(description = "Long test", priority = 5, timeOut = 4000)
+    @Test(description = "Long test", priority = 5, timeOut = 15000)
     public void longTest() throws Exception {
         Thread.sleep(10 * 1000);
     }

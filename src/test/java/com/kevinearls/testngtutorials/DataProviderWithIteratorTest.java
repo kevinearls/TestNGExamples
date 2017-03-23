@@ -18,8 +18,8 @@ import java.util.List;
  */
 @Listeners({MyListener.class})
 
-public class DataProviderWithIterator {
-    private static final Logger logger = LoggerFactory.getLogger(DataProviderWithIterator.class);
+public class DataProviderWithIteratorTest {
+    private static final Logger logger = LoggerFactory.getLogger(DataProviderWithIteratorTest.class);
 
     private NonRepeatingCounter nrc = new NonRepeatingCounter();
 
@@ -44,10 +44,5 @@ public class DataProviderWithIterator {
     public void simpleTest(TestData testData) throws Exception {
         logger.info("SimpleTest invoked with " + testData.getMinimum() + " and " + testData.getMaximum());
         logger.info("Expected: " + testData.getExpectedResultValues());
-
-
-
-        
-        
     }
 }

@@ -1,6 +1,6 @@
-package com.kevinearls.testngtutorials.utils;
+package com.kevinearls.testngtutorials;
 
-import com.kevinearls.testngtutorials.NonRepeatingCounter;
+import com.kevinearls.testngtutorials.utils.TestData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
