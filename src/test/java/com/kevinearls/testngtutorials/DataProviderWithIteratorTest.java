@@ -42,9 +42,12 @@ public class DataProviderWithIterator {
 
     @Test(dataProvider = "getNumbers")
     public void simpleTest(TestData testData) throws Exception {
-        System.out.println("SimpleTest invoked with " + testData.getMinimum() + " and " + testData.getMaximum());
-        System.out.println("Expected: " + testData.getExpectedResultValues());
-        //Thread.sleep(100);
-        System.out.println(nrc.getNotRepeatingNumbers(testData.getMinimum(), testData.getMaximum()));
+        logger.info("SimpleTest invoked with " + testData.getMinimum() + " and " + testData.getMaximum());
+        logger.info("Expected: " + testData.getExpectedResultValues());
+
+
+
+        
+        
     }
 }

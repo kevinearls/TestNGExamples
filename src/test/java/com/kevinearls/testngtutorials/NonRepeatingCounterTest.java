@@ -1,6 +1,8 @@
 package com.kevinearls.testngtutorials.utils;
 
 import com.kevinearls.testngtutorials.NonRepeatingCounter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,6 +18,7 @@ import static org.testng.Assert.assertTrue;
 public class NonRepeatingCounterTest {
 
     private NonRepeatingCounter nrc;
+    private static final Logger logger = LoggerFactory.getLogger(NonRepeatingCounterTest.class);
 
     @BeforeMethod
     public void setup() {
@@ -39,10 +42,11 @@ public class NonRepeatingCounterTest {
 
     @Test(dataProvider = "getNumbers")
     public void simpleTest(TestData testData) throws Exception {
-        System.out.println("SimpleTest invoked with " + testData.getMinimum() + " and " + testData.getMaximum());
-        System.out.println("Expected: " + testData.getExpectedResultValues());
-        //Thread.sleep(100);
-        System.out.println(nrc.getNotRepeatingNumbers(testData.getMinimum(), testData.getMaximum()));
+        logger.info("SimpleTest invoked with " + testData.getMinimum() + " and " + testData.getMaximum());
+        logger.info("Expected: " + testData.getExpectedResultValues());
+
+        List<String> numbers = nrc.getNotRepeatingNumbers(testData.getMinimum(), testData.getMaximum());
+        logger.info("NRC Returned: " + numbers.toString());
     }
 
 }
